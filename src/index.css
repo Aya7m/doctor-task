@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.imgo{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+
+@keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.4s ease-in-out both;
+  }
+
+  .main{
+    color:#4A90E2;
+  }
+  .text-primary {
+    color: #4A90E2; /* Blue */
+  }
+  
+  .bg-primary {
+    background-color: #4A90E2; /* Blue */
+  }
+  
+  .bg-secondary {
+    background-color: #7ED321; /* Light Green */
+  }
+  
+  .bg-light {
+    background-color: #F0F0F0; /* Light Gray */
+  }
+  
+  .text-dark {
+    color: #1F2A44; /* Dark Blue */
+  }
+  
+  .bg-warning {
+    background-color: #FF6F61; /* Warm Orange */
+  }
+  
+  .text-error {
+    color: #F44336; /* Red */
+  }
+  
+  .bg-lightblue {
+    background-color: #E0F7FA; /* Light Sky Blue */
+  }
+  
+  .text-muted {
+    color: #333333; /* Dark Text */
+  }
+  
+  .bg-white {
+    background-color: #FFFFFF; /* White */
+  }
+
+
+ /* تنسيق السلايدر */
+.swiper-container {
+  width: 100%;
+  height: 100%; /* تحديد ارتفاع السلايدر */
+  margin-bottom: 20px; /* المسافة أسفل السلايدر */
+}
+
+/* تنسيق الصور داخل السلايدر */
+.swiper-slide img {
+  width: 100%; /* التأكد من أن الصور تغطي كامل العرض */
+  height: 100%; /* التأكد من أن الصور تغطي كامل الارتفاع */
+  object-fit: cover; /* لتغطية الصورة بدون تشويه */
+}
+
+/* تنسيق الأزرار الخاصة بالتنقل */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* تغيير لون الأزرار إلى الأبيض */
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية داكنة للأزرار */
+  border-radius: 50%; /* جعل الأزرار مدورة */
+}
+
+/* تأثيرات عند المرور على الأزرار */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* زيادة درجة العتمة عند التمرير */
+}
