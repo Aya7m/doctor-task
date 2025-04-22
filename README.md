@@ -8,24 +8,24 @@ This project was developed as part of a frontend assignment for **InVitro Capita
 ## 📌 Features
 
 ### 🩺 Doctor Directory View
-- Display of doctor details: **name**, **photo**, **specialty**, **rating**, **availability**, and **location**.
-- Filters:
-  - By **specialty**
-  - By **location**
-  - By **doctor name**
-- **Book Appointment** button with animated UI transitions.
+- Display of doctor details: **name**, **photo**, **specialty**, **rating**, **availability**, and **location**
+- Filtering by:
+  - **Specialty**
+  - **Location**
+  - **Doctor name**
+- **Book Appointment** button with animated transitions
 
 ### 📅 Booking Modal
-- Shows selected doctor details and **mock time slots**.
-- User can select and confirm a slot.
-- Animated modal open/close.
+- Displays selected doctor information and **mocked available time slots**
+- Allows users to select and confirm a slot
+- Smooth modal open/close animations
 
 ### 📋 Appointments Summary View
-- Displays list of all booked appointments:
+- Lists all booked appointments with:
   - Doctor name
   - Specialty
-  - Appointment time & location
-- Animated appointment cards for better UX.
+  - Appointment time and location
+- Animated appointment cards for enhanced user experience
 
 ---
 
@@ -35,9 +35,9 @@ This project was developed as part of a frontend assignment for **InVitro Capita
 - 🎨 TailwindCSS
 - 🔁 React Router (for navigation)
 - 🔔 react-hot-toast (for notifications)
-- 🔧 lucide-react (for icons)
-- 🧠 useState & useEffect
-- 🧪 Mock data only – **No backend used**
+- 🎯 lucide-react (for icons)
+- 🧠 React Hooks: `useState`, `useEffect`
+- 🧪 **Mock data only** – No backend used
 
 ---
 
@@ -45,10 +45,10 @@ This project was developed as part of a frontend assignment for **InVitro Capita
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/doctor-booking-ui.git
+git clone https://github.com/Aya7m/doctor-task.git
 
 # 2. Navigate to the project folder
-cd doctor-booking-ui
+cd doctor-task
 
 # 3. Install dependencies
 npm install
@@ -56,60 +56,76 @@ npm install
 # 4. Run the development server
 npm run dev
 
-
 🤖 Use of AI Tools
-To accelerate development and improve code quality, the following AI tools were used:
+To accelerate development and improve code quality, I used:
 
-ChatGPT:
+ChatGPT
 
-Assisted in writing React components and logic
+Assisted in building React components and logic
 
-Helped design filtering functionality
+Helped implement filtering functionality
 
-Contributed to writing this README
+Supported writing this README
 
 ♿ Accessibility Considerations
-Fully keyboard-navigable:
+Fully keyboard-navigable: Tab, Shift+Tab, Enter
 
-Tab / Shift+Tab to move between elements
+Semantic HTML and accessible form controls
 
-Enter to select buttons or submit
-
-Uses semantic HTML and accessible form controls
-
-Focus indicators for inputs and interactive elements
+Focus indicators on inputs and buttons
 
 Responsive design across mobile, tablet, and desktop
 
-Passes basic accessibility audits with Lighthouse and axe DevTools
+Passed basic audits using Lighthouse and axe DevTools
+
+⚠️ Known Limitations
+All data is mocked (no backend)
+
+No validation on booking form
+
+Appointments stored in local state only (not persisted)
 
 🚀 Future Enhancements
-Add full screen reader support using aria-* attributes
+Connect to real backend with persistent storage
 
-Improve mobile accessibility:
+Allow users to update or cancel appointments
 
-Larger touch targets
+Add calendar-based booking view
 
-More readable fonts
+Improve ARIA support for screen readers
 
-Add automated accessibility tests
-
-Add internationalization (i18n) for multiple languages
+Larger touch targets on mobile
 
 Add dark mode toggle
 
-📌 Known Limitations / Next Steps
-Appointments are stored in local state only (no database or persistence)
+Add i18n for multi-language support
 
-Time slots are mocked
+Integrate automated accessibility tests
 
-Future improvements:
+✅ Accessibility Tips
+Add aria-label attributes to important buttons and form elements for screen reader support
 
-Add persistent storage (localStorage or backend)
+Run accessibility audits using tools like:
 
-Allow users to cancel or update appointments
+axe DevTools Chrome Extension
 
+Lighthouse
 
-## 💁‍♀️ Made with ❤️ by [Aya](https://github.com/Aya7m)
+Focus on improvements related to:
 
+Color contrast
 
+alt attributes for images
+
+Proper labeling for interactive elements
+
+💡 Small UI Enhancement
+On the Appointments page, consider adding:
+{appointments.length === 0 && (
+  <p className="text-center text-gray-500">
+    No appointments booked yet.
+  </p>
+)}
+
+👩‍💻 Author
+Made with ❤️ by Aya
