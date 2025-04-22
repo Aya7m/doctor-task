@@ -1,12 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react'; // أيقونة ✅
-import { motion } from 'framer-motion'; // للأنيميشن
+import { CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const AppointmentConfirmation = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
-  const { doctorName, appointmentDate, appointmentTime , doctorSpecialty, doctorLocation} = state || {};
+  const { doctorName, appointmentDate, appointmentTime, doctorSpecialty, doctorLocation } = state || {};
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (['Escape', 'Enter', 'Backspace'].includes(e.key)) {
+        navigate('/');
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [navigate]);
+
+  if (!state) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded shadow-md text-center">
+          <p className="text-red-500 font-semibold mb-4">لا توجد معلومات للحجز.</p>
+          <button
+            onClick={() => navigate('/')}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+          >
+            العودة للصفحة الرئيسية
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition duration-300">

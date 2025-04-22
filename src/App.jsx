@@ -7,6 +7,7 @@ import AppointmentConfirmation from "./pages/AppointmentConfirmation";
 import { Toaster } from "react-hot-toast";
 
 
+
 const App = () => {
   return (
     <div className="App">

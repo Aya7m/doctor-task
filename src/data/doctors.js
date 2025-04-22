@@ -20,7 +20,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-25", time: "09:00" },
       ],
     },
     {
@@ -40,10 +40,10 @@ const doctors = [
       specialty: 'Ear, Nose and Throat',
       rating: 4.7,
       available: true,
-      availableSlots: [
-        "2025-04-24T10:00",
-        "2025-04-25T11:30",
-        "2025-04-28T09:00",
+      appointments: [
+        { date: "2025-04-20", time: "10:00" },
+        { date: "2025-04-21", time: "14:00" },
+        { date: "2025-04-26", time: "09:00" },
       ],
 
       location: 'Giza, Egypt',
@@ -59,7 +59,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-24", time: "09:00" },
       ],
       location: 'Cairo, Egypt',
       photo: 'https://media.istockphoto.com/id/1806608544/photo/portrait-of-a-female-doctor-at-the-workplace.jpg?s=612x612&w=0&k=20&c=MARkttlfJ1JoAxKffrmXxbI_rIPJTKWaKTrFv1qwCZc=',
@@ -73,7 +73,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-25", time: "09:00" },
       ],
       location: 'Tanta, Egypt',
       photo: 'https://media.istockphoto.com/id/1785918657/photo/portrait-of-doctor-with-smile-confidence-and-hospital-employee-with-care-support-and-trust.jpg?s=612x612&w=0&k=20&c=edx0LITtjis5zxtRZIbx24yholpv4oNicE-e69guius=',
@@ -97,7 +97,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-25", time: "09:00" },
       ],
       location: 'Minya, Egypt',
       photo: 'https://media.istockphoto.com/id/1340883379/photo/young-doctor-hospital-medical-medicine-health-care-clinic-office-portrait-glasses-man.jpg?s=612x612&w=0&k=20&c=_H4VUPBkS0gEj5ZdZzQo-Hw3lMuyofJpB-P9yS92Wyw=',
@@ -111,7 +111,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-24", time: "09:00" },
       ],
       location: 'Assiut, Egypt',
       photo: 'https://media.istockphoto.com/id/1346124900/photo/confident-successful-mature-doctor-at-hospital.jpg?s=612x612&w=0&k=20&c=S93n5iTDVG3_kJ9euNNUKVl9pgXTOdVQcI_oDGG-QlE=',
@@ -125,7 +125,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-25", time: "09:00" },
       ],
       location: 'Alexandria, Egypt',
       photo: 'https://media.istockphoto.com/id/1820379319/photo/healthcare-doctor-and-man-with-arms-crossed-at-hospital-with-smile-for-support-service-and.jpg?s=612x612&w=0&k=20&c=26JOTuHgbpIRxZYOBakMRFFZt9BxF-JtL97LErFMBAU=',
@@ -139,7 +139,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-26", time: "09:00" },
       ],
       location: 'Menoufia, Egypt',
       photo: 'https://media.istockphoto.com/id/1627750071/photo/happy-portrait-and-black-woman-doctor-proud-in-hospital-excited-or-cheerful-for-healthcare.jpg?s=612x612&w=0&k=20&c=p5RJXG6VeWwLYP8ZOH8-cjgHUVU1j-if9WofsQ5tp6A=',
@@ -163,7 +163,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-27", time: "09:00" },
       ],
       location: 'Cairo, Egypt',
       photo: 'https://media.istockphoto.com/id/1861987838/photo/smiling-female-doctor-looking-at-camera-in-the-medical-consultation.jpg?s=612x612&w=0&k=20&c=Cr60evXkBMcfRAVG5Q9iaIbjdvcHGgSOutvsYraExtI=',
@@ -177,7 +177,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-25", time: "09:00" },
       ],
       location: 'Cairo, Egypt',
       photo: 'https://media.istockphoto.com/id/1436148451/photo/smiling-female-doctor-with-digital-tablet-standing-at-isolated-grey-background.jpg?s=612x612&w=0&k=20&c=-cjXiU2FR2B7e6PKi4ELdFRPMiu22aIBkWLSCGzYjYM=',
@@ -191,7 +191,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-27", time: "09:00" },
       ],
       location: 'Tanta, Egypt',
       photo: 'https://media.istockphoto.com/id/138205019/photo/happy-healthcare-practitioner.jpg?s=612x612&w=0&k=20&c=b8kUyVtmZeW8MeLHcDsJfqqF0XiFBjq6tgBQZC7G0f0=',
@@ -205,7 +205,7 @@ const doctors = [
       appointments: [
         { date: "2025-04-20", time: "10:00" },
         { date: "2025-04-21", time: "14:00" },
-        { date: "2025-04-22", time: "09:00" },
+        { date: "2025-04-26", time: "09:00" },
       ],
       location: 'Minya, Egypt', 
       photo: 'https://media.istockphoto.com/id/938438758/photo/confident-doctor-posing-at-the-hospital.jpg?s=612x612&w=0&k=20&c=dv_py_4-TfxJzzgQTELMcLrzzO0l5Xtxv4WTHhgWvmY=',

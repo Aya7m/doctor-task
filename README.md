@@ -1,107 +1,115 @@
 # 🏥 Doctor Booking UI Module
 
-A responsive and accessible doctor booking UI module built with React and TailwindCSS. "This project was developed as part of a frontend assignment for InVitro Capital
+A responsive and accessible doctor booking interface built with **React** and **TailwindCSS**.  
+This project was developed as part of a frontend assignment for **InVitro Capital**.
+
+---
 
 ## 📌 Features
 
+### 🩺 Doctor Directory View
+- Display of doctor details: **name**, **photo**, **specialty**, **rating**, **availability**, and **location**.
+- Filters:
+  - By **specialty**
+  - By **location**
+  - By **doctor name**
+- **Book Appointment** button with animated UI transitions.
 
-Doctor Directory View with:
+### 📅 Booking Modal
+- Shows selected doctor details and **mock time slots**.
+- User can select and confirm a slot.
+- Animated modal open/close.
 
-Name, photo, specialty, rating, availability, and location.
+### 📋 Appointments Summary View
+- Displays list of all booked appointments:
+  - Doctor name
+  - Specialty
+  - Appointment time & location
+- Animated appointment cards for better UX.
 
-Filters by specialty, location, and doctor name.
+---
 
-“Book Appointment” button.
+## 🛠️ Tech Stack
 
-Animations for smooth transitions and interactions.
+- ⚛️ React
+- 🎨 TailwindCSS
+- 🔁 React Router (for navigation)
+- 🔔 react-hot-toast (for notifications)
+- 🔧 lucide-react (for icons)
+- 🧠 useState & useEffect
+- 🧪 Mock data only – **No backend used**
 
-
-Booking Modal:
-
-Displays selected doctor details and mock time slots.
-
-Allows selecting a time slot and confirming the appointment.
-
-Animations for modal opening and closing.
-
-Appointments Summary View:
-
-Lists all booked appointments with full details (doctor name, specialty, time, and location).
-
-Animations for rendering appointment cards.
-
-
-
-🛠️ Tech Stack
-React
-
-TailwindCSS
-
-React Router for page navigation
-
-react-hot-toast for user feedback
-lucide-react for icons
-
-useState & useEffect for state and lifecycle management
-
-Mock data (no backend used)
-
-
+---
 
 ## 🚀 Setup Instructions
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/doctor-booking-ui.git
-2. Navigate to the project directory:
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/doctor-booking-ui.git
+
+# 2. Navigate to the project folder
 cd doctor-booking-ui
 
-
-3.Install dependencies
+# 3. Install dependencies
 npm install
 
-4.Run the development server
+# 4. Run the development server
 npm run dev
 
 
-
-
-🧠 Use of AI Tools
+🤖 Use of AI Tools
 To accelerate development and improve code quality, the following AI tools were used:
 
 ChatGPT:
 
-Helped in writing components, logic structure, and filtering functionality.
+Assisted in writing React components and logic
 
-Assisted in generating this README file.
+Helped design filtering functionality
 
-
+Contributed to writing this README
 
 ♿ Accessibility Considerations
+Fully keyboard-navigable:
 
-Fully navigable via keyboard (Tab, Enter).
+Tab / Shift+Tab to move between elements
 
-Uses semantic HTML and proper ARIA attributes.
+Enter to select buttons or submit
 
-Responsive design across all screen sizes (mobile, tablet, desktop).
+Uses semantic HTML and accessible form controls
 
-Passes basic accessibility checks using Lighthouse and axe DevTools.
+Focus indicators for inputs and interactive elements
 
+Responsive design across mobile, tablet, and desktop
 
+Passes basic accessibility audits with Lighthouse and axe DevTools
+
+🚀 Future Enhancements
+Add full screen reader support using aria-* attributes
+
+Improve mobile accessibility:
+
+Larger touch targets
+
+More readable fonts
+
+Add automated accessibility tests
+
+Add internationalization (i18n) for multiple languages
+
+Add dark mode toggle
 
 📌 Known Limitations / Next Steps
+Appointments are stored in local state only (no database or persistence)
 
-Appointments are stored in local state only (no database or persistence).
+Time slots are mocked
 
-Time slots are mocked (randomly generated).
+Future improvements:
 
-Future Improvements:
-Add persistent storage using localStorage or backend service.
+Add persistent storage (localStorage or backend)
 
-Allow appointment cancellations or updates.
-
-Made with ❤️ by Aya
+Allow users to cancel or update appointments
 
 
+## 💁‍♀️ Made with ❤️ by [Aya](https://github.com/Aya7m)
 
 

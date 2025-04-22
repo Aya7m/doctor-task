@@ -35,7 +35,7 @@ const DoctorSearch = () => {
       <div className="w-full h-screen relative overflow-hidden">
 
         <div className="absolute w-full h-full top-0 left-0 z-10  flex items-center justify-center">
-          <div className='flex flex-col items-center justify-center bg-primary opacity-80 w-[100%] min-h-screen py-12 p-4 rounded-lg shadow-md'>
+          <div className='flex flex-col items-center justify-center bg-primary opacity-85 w-[100%] min-h-screen py-12 p-4 rounded-lg shadow-md'>
 
             <h1 className='text-2xl font-bold mb-4 text-white flex justify-center items-center'>Search Doctor</h1>
 
@@ -44,7 +44,12 @@ const DoctorSearch = () => {
 
               <input
                 type="text"
-                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2  my-4  focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleSearch();
+                  }
+                }}
+                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
                 placeholder="search by name"
                 value={nameFilter}
                 onChange={(e) => setNameFilter(e.target.value)}
@@ -52,8 +57,9 @@ const DoctorSearch = () => {
 
               <select
                 value={specialtyFilter}
-                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2  my-4  focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
                 onChange={(e) => setSpecialtyFilter(e.target.value)}
+                tabIndex={0}
               >
                 <option value="">choose specialty</option>
                 <option value="Dermatology (Skin)">Dermatology (Skin)</option>
@@ -66,18 +72,21 @@ const DoctorSearch = () => {
               <select
                 value={availabilityFilter}
                 onChange={(e) => setAvailabilityFilter(e.target.value)}
-                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2  my-4  focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+                tabIndex={0}
+                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
               >
                 <option value="">choose availability</option>
                 <option value="available">Available</option>
                 <option value="unavailable">Unavailable</option>
+
               </select>
 
 
               <select
                 value={locationFilter}
+                tabIndex={0}
                 onChange={(e) => setLocationFilter(e.target.value)}
-                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2  my-4  focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+                className="border-2 border-gray-900 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
               >
                 <option value="">choose location</option>
                 {locations.map((location, index) => (
@@ -87,7 +96,18 @@ const DoctorSearch = () => {
                 ))}
               </select>
 
-              <button onClick={handleSearch} className="bg-white hover:bg-blue-700 text-gray-900 font-bold py-2 px-4 rounded w-full my-4">Search</button>
+              <button
+                onClick={handleSearch}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleSearch();
+                  }
+                }}
+                className="bg-white hover:bg-blue-700 text-gray-900 font-bold py-2 px-4 rounded w-full my-4"
+              >
+                Search
+              </button>
+
             </div>
           </div>
         </div>
@@ -104,6 +124,10 @@ const DoctorSearch = () => {
           loop={true}
           spaceBetween={30}
           slidesPerView={1}
+          keyboard={{
+            enabled: true, // تفعيل التفاعل عبر لوحة المفاتيح
+            onlyInViewport: true,
+          }}
           className='w-full h-full z-0'
         >
           <SwiperSlide>
@@ -127,6 +151,31 @@ const DoctorSearch = () => {
               className="w-full h-full object-cover"
             />
           </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-152/images/homecovernewen4-eg-en.jpg"
+              alt="Image 4"
+              className="w-full h-full object-cover"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img
+              src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-152/images/homecovernewen3-eg-en.jpg"
+              alt="Image 5"
+              className="w-full h-full object-cover"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img
+              src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-152/images/homecovernewen2-eg-en.jpg"
+              alt="Image 6"
+              className="w-full h-full object-cover"
+            />
+          </SwiperSlide>
+
+
         </Swiper>
 
 
